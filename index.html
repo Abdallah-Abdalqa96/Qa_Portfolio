@@ -4,133 +4,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdallah Abdalqader - Portfolio</title>
+    <title>Abdallah Abdalqader - Quality Assurance Engineer Portfolio</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            background: #f9f9f9;
             color: #333;
         }
         header {
-            background: #4CAF50;
-            color: white;
-            padding: 1rem 2rem;
+            background-color: #022b3a;
+            color: #fff;
             text-align: center;
+            padding: 40px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+        header p {
+            font-size: 1em;
+            margin-top: 5px;
         }
         nav {
-            text-align: center;
-            margin: 1rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            background-color: #0d253f;
+            padding: 10px 0;
         }
         nav a {
-            margin: 0 1rem;
             text-decoration: none;
-            color: #4CAF50;
-            font-weight: bold;
+            color: white;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
         }
-        .section {
-            padding: 2rem;
-            max-width: 800px;
-            margin: 0 auto;
+        nav a:hover {
+            color: #ffd700;
         }
-        h1, h2 {
-            color: #4CAF50;
+        section {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 30px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
-        .project {
-            border: 1px solid #ddd;
-            padding: 1rem;
-            margin-bottom: 1rem;
+        section:hover {
+            transform: scale(1.02);
+        }
+        .section-title {
+            font-size: 2em;
+            color: #022b3a;
+            margin-bottom: 15px;
+        }
+        .projects .project-card {
+            background-color: #f1f1f1;
+            padding: 15px;
+            margin: 10px 0;
             border-radius: 5px;
-            background: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .projects .project-card a {
+            color: #022b3a;
+            font-size: 1.2em;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .projects .project-card a:hover {
+            color: #ffd700;
+        }
+        .skills ul, .projects ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .skills ul li, .projects ul li {
+            margin: 10px 0;
+            font-size: 1.1em;
         }
         footer {
+            background-color: #022b3a;
+            color: #fff;
             text-align: center;
-            background: #333;
-            color: white;
-            padding: 1rem 0;
-            margin-top: 2rem;
+            padding: 20px 0;
         }
-        a {
-            color: #4CAF50;
+        .contact-info {
+            font-size: 1.2em;
+            margin: 10px 0;
         }
     </style>
+    <script>
+        // Smooth scroll function
+        document.addEventListener("DOMContentLoaded", function() {
+            const navLinks = document.querySelectorAll("nav a");
+            navLinks.forEach(link => {
+                link.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    const sectionId = link.getAttribute("href").substring(1);
+                    const section = document.getElementById(sectionId);
+                    window.scrollTo({
+                        top: section.offsetTop - 50, // Offset for better visibility
+                        behavior: "smooth"
+                    });
+                });
+            });
+        });
+    </script>
 </head>
 <body>
-
-<header>
-    <h1>Abdallah Abdalqader</h1>
-    <p>Quality Assurance Engineer | Automation Specialist</p>
-</header>
-
-<nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<section id="about" class="section">
-    <h2>About Me</h2>
-    <p>
-        I am a Quality Assurance Engineer with a strong foundation in manual and automated testing. 
-        Skilled in designing and executing test cases, identifying and resolving bugs, and enhancing software reliability. 
-        Proficient in tools and frameworks such as Selenium WebDriver, TestNG, and Postman. 
-        Passionate about ensuring seamless product delivery through collaboration and precision.
-    </p>
-</section>
-
-<section id="projects" class="section">
-    <h2>Projects</h2>
-
-    <div class="project">
-        <h3>MagentoProject</h3>
-        <p>Automated testing project for Magento website, focusing on user registration, product addition, and checkout workflows.</p>
-        <a href="https://github.com/Abdallah-Abdalqa96/MagentoProject" target="_blank">View on GitHub</a>
-    </div>
-
-    <div class="project">
-        <h3>Automation Testing - Almosafer</h3>
-        <p>Automated testing for Almosafer platform, covering booking workflows and payment gateway testing.</p>
-        <a href="https://github.com/Abdallah-Abdalqa96/Automation_Testing_Almosafer_Project" target="_blank">View on GitHub</a>
-    </div>
-
-    <div class="project">
-        <h3>Automation Testing - Smart Project</h3>
-        <p>End-to-end automation testing for Smart Project, focusing on critical functionalities and regression testing.</p>
-        <a href="https://github.com/Abdallah-Abdalqa96/Automation_Testing_Smart_Project" target="_blank">View on GitHub</a>
-    </div>
-
-    <div class="project">
-        <h3>Manual Testing - Magento</h3>
-        <p>Manual testing project for Magento, ensuring proper functionality and identifying key bugs in user workflows.</p>
-        <a href="https://github.com/Abdallah-Abdalqa96/Manual_Testing_Magento_Project" target="_blank">View on GitHub</a>
-    </div>
-
-</section>
-
-<section id="skills" class="section">
-    <h2>Skills</h2>
-    <ul>
-        <li><strong>Test Automation:</strong> Selenium WebDriver, TestNG</li>
-        <li><strong>Programming:</strong> Java, SQL</li>
-        <li><strong>API Testing:</strong> Postman</li>
-        <li><strong>Tools:</strong> JIRA, Git/GitHub</li>
-        <li><strong>Testing Methodologies:</strong> UAT, Functional Testing, Regression Testing, Sanity Testing</li>
-        <li><strong>Soft Skills:</strong> Problem-Solving, Communication, Team Collaboration, Attention to Detail</li>
-    </ul>
-</section>
-
-<section id="contact" class="section">
-    <h2>Contact</h2>
-    <p><strong>Email:</strong> <a href="mailto:abdallahabdalqader638@gmail.com">abdallahabdalqader638@gmail.com</a></p>
-    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/abdallah-abdalqader-579a42245/" target="_blank">Abdallah Abdalqader</a></p>
-    <p><strong>GitHub:</strong> <a href="https://github.com/Abdallah-Abdalqa96" target="_blank">Abdallah-Abdalqa96</a></p>
-</section>
-
-<footer>
-    <p>&copy; 2025 Abdallah Abdalqader. All rights reserved.</p>
-</footer>
-
+    <header>
+        <h1>Abdallah Abdalqader</h1>
+        <p>Quality Assurance Engineer | Manual & Automation Specialist</p>
+    </header>
+    <nav>
+        <a href="#About">About Me</a>
+        <a href="#courses">Courses</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact Info</a>
+    </nav>
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <p>I am a Quality Assurance Engineer with a solid foundation in manual and automated testing. Proficient in tools like Selenium WebDriver, TestNG, and Postman. Skilled in identifying bugs, designing test cases, and ensuring software reliability. Passionate about collaborating with teams for seamless product delivery.</p>
+    </section>
+    <section id="courses">
+        <h2 class="section-title">Courses</h2>
+        <p><strong>Quality Assurance & Testing - Princess Sumaya University</strong></p>
+        <p>This course provided me with hands-on experience in both manual and automated testing, specifically using Selenium WebDriver and Java. I successfully created test scripts, conducted test cases, and collaborated with developers to resolve defects.</p>
+    </section>
+    <section id="projects" class="projects">
+        <h2 class="section-title">Projects</h2>
+        <ul>
+            <li class="project-card"><a href="https://github.com/Abdallah-Abdalqa96/Automation_Testing_automationteststore_Project" target="_blank">Automation Testing - Automation Test Store</a></li>
+            <li class="project-card"><a href="https://github.com/Abdallah-Abdalqa96/Automation_Testing_Almosafer_Project" target="_blank">Automation Testing - Almosafer</a></li>
+            <li class="project-card"><a href="https://github.com/Abdallah-Abdalqa96/Automation_Testing_Smart_Project" target="_blank">Automation Testing - Smart Project</a></li>
+            <li class="project-card"><a href="https://github.com/Abdallah-Abdalqa96/Automation_Testing_Magento_Project" target="_blank">Automation Testing - Magento</a></li>
+            <li class="project-card"><a href="https://github.com/Abdallah-Abdalqa96/Manual_Testing_Magento_Project" target="_blank">Manual Testing - Magento</a></li>
+        </ul>
+    </section>
+    <section id="skills" class="skills">
+        <h2 class="section-title">Skills</h2>
+        <ul>
+            <li>Test Automation: Selenium WebDriver, TestNG</li>
+            <li>Programming: Java, SQL</li>
+            <li>API Testing: Postman</li>
+            <li>Tools: JIRA, Git/GitHub</li>
+            <li>Testing Methodologies: UAT, Functional Testing, Regression Testing</li>
+        </ul>
+    </section>
+    <section id="contact">
+        <h2 class="section-title">Contact Info</h2>
+        <p class="contact-info">Email: <a href="mailto:abdallahabdalqader638@gmail.com">abdallahabdalqader638@gmail.com</a></p>
+        <p class="contact-info">GitHub: <a href="https://github.com/Abdallah-Abdalqa96" target="_blank">Abdallah-Abdalqa96</a></p>
+        <p class="contact-info">LinkedIn: <a href="https://www.linkedin.com/in/abdallah-abdalqader" target="_blank">Abdallah Abdalqader</a></p>
+    </section>
+    <footer>
+        <p>© 2025 Abdallah Abdalqader. All rights reserved.</p>
+    </footer>
 </body>
+</html>
 </html>
