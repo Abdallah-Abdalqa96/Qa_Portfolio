@@ -83,12 +83,6 @@
         .projects .project-card a:hover {
             color: #ffd700;
         }
-        .project-description {
-            font-size: 1em;
-            color: #666;
-            margin-top: 12px;
-            font-weight: 300;
-        }
         .skills ul, .projects ul {
             list-style: none;
             padding: 0;
@@ -102,11 +96,26 @@
             background-color: #003366;
             color: #fff;
             text-align: center;
-            padding: 20px 0;
+            padding: 40px 0;
         }
         .contact-info {
-            font-size: 1.1em;
-            margin: 10px 0;
+            font-size: 1.2em;
+            margin: 15px 0;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .social-links a {
+            color: white;
+            font-size: 1.5em;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .social-links a:hover {
+            color: #ffd700;
         }
         a {
             color: #1a73e8;
@@ -158,24 +167,19 @@
         <h2 class="section-title">Projects</h2>
         <ul>
             <li class="project-card">
-                <a href="https://github.com/Abdallah-Abdalqa96/Automation_Testing_automationteststore_Project" target="_blank">Automation_Testing_Automation Test Store</a>
-                <p class="project-description">Automated testing for the Automation Test Store using Selenium WebDriver and Java, including login, registration, and product search functionalities.</p>
+                <a href="https://github.com/Abdallah-Abdalqa96/Automation_Testing_automationteststore_Project" target="_blank">Automation Testing Automation Test Store</a>
             </li>
             <li class="project-card">
-                <a href="https://github.com/Abdallah-Abdalqa96/Automation_Testing_Almosafer_Project" target="_blank">Automation_Testing_Almosafer</a>
-                <p class="project-description">End-to-end automation of Almosafer's travel booking platform, implementing tests for flight search and booking processes.</p>
+                <a href="https://github.com/Abdallah-Abdalqa96/Automation_Testing_Almosafer_Project" target="_blank">Automation Testing Almosafer</a>
             </li>
             <li class="project-card">
-                <a href="https://github.com/Abdallah-Abdalqa96/Automation_Testing_Smart_Project" target="_blank">Automation_Testing_Smart Project</a>
-                <p class="project-description">Automated testing for Smart Project’s web application, focusing on verifying user account features and data integrity.</p>
+                <a href="https://github.com/Abdallah-Abdalqa96/Automation_Testing_Smart_Project" target="_blank">Automation Testing Smart Project</a>
             </li>
             <li class="project-card">
-                <a href="https://github.com/Abdallah-Abdalqa96/Automation_Testing_Magento_Project" target="_blank">Automation Testing_Magento</a>
-                <p class="project-description">Test automation for Magento's e-commerce platform, including cart management and checkout process validation.</p>
+                <a href="https://github.com/Abdallah-Abdalqa96/Automation_Testing_Magento_Project" target="_blank">Automation Testing Magento</a>
             </li>
             <li class="project-card">
-                <a href="https://github.com/Abdallah-Abdalqa96/Manual_Testing_Magento_Project" target="_blank">Manual Testing_Magento</a>
-                <p class="project-description">Manual testing of Magento’s platform, ensuring user flows are smooth, and all functionalities are performing as expected.</p>
+                <a href="https://github.com/Abdallah-Abdalqa96/Manual_Testing_Magento_Project" target="_blank">Manual Testing Magento</a>
             </li>
         </ul>
     </section>
@@ -192,10 +196,14 @@
     <section id="contact">
         <h2 class="section-title">Contact Info</h2>
         <p class="contact-info">Email: <a href="mailto:abdallahabdalqader638@gmail.com">abdallahabdalqader638@gmail.com</a></p>
-        <p class="contact-info">GitHub: <a href="https://github.com/Abdallah-Abdalqa96" target="_blank">Abdallah-Abdalqa96</a></p>
-        <p class="contact-info">LinkedIn: <a href="https://www.linkedin.com/in/abdallah-abdalqader-579a42245/" target="_blank">Abdallah Abdalqader</a></p>
+        <p class="contact-info">Phone: <a href="tel:+962791853966">+962791853966</a></p>
     </section>
     <footer>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/abdallah-abdalqader-579a42245/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/Abdallah-Abdalqa96" target="_blank">GitHub</a>
+            <a href="tel:+962791853966">WhatsApp</a>
+        </div>
         <p>© 2025 Abdallah Abdalqader. All rights reserved.</p>
     </footer>
 </body>
